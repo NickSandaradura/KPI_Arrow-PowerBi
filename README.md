@@ -1,35 +1,16 @@
-KPI Indicator Arrows in PowerBI
-This guide explains how to create and visualize KPI indicator arrows in PowerBI using the "Image Pro by Cloud Scope" visual.
+//Dokumentation zur Erstellung der KPI-Indikator Pfeilen in PowerBi 
 
-Steps
-Create "Arrow-UP" Measure
+//1. Messurement erstellen mit der Bennenung "Arrow-UP" 
+//Code: ArrowUp.txt
 
-dax
-Code kopieren
-Arrow-UP = "URL_TO_YOUR_UPWARD_ARROW_IMAGE"
-Create "Arrow-Down" Measure
+//2. Messurement erstellen mit der Benneung "Arrow-Down"
+//Code: ArrowDown.txt
 
-dax
-Code kopieren
-Arrow-Down = "URL_TO_YOUR_DOWNWARD_ARROW_IMAGE"
-Create "KPI" Measure
+3. Messurement erstellen mit der Bennung "KPI"
+//Code:
+KPI = IF( CALCULATE(
+    SUM(Value1)) > SUM(Value2), [ArrowUP], [ArrowDown])
+//SUM wird nur benötigt wenn Wert als Summe ∑ angebgen ist 
 
-dax
-Code kopieren
-KPI = IF(
-    CALCULATE(SUM(Value1)) > SUM(Value2), 
-    [Arrow-UP], 
-    [Arrow-Down]
-)
-// Note: SUM is only needed if the values are given as sums.
-Visualize KPI
+4. Visual mit der Bezeichnung "Image Pro by Cloud Scope" verwenden und KPI als Source angeben 
 
-Add "Image Pro by Cloud Scope" to your report.
-Drag "KPI" measure to "Image URL" field.
-Customize design:
-Background: White
-Border: Black
-Font: Consolas, 12pt
-Arrow size: 32x32px
-Summary
-Create visual KPI indicators in PowerBI with upward/downward arrows using the "Image Pro by Cloud Scope" visual. Customize the design for effective dashboards.
