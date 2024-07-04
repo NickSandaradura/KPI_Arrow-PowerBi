@@ -1,0 +1,3 @@
+KPI = IF( CALCULATE(
+    SUM(Value1)) > SUM(Value2), [ArrowUP], [ArrowDown])
+//SUM wird nur benötigt wenn Wert als Summe ∑ angebgen ist 
