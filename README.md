@@ -1,20 +1,20 @@
-Dokumentation zur Erstellung der KPI-Indikator Pfeilen in PowerBI
-Diese Anleitung beschreibt die Erstellung und Visualisierung von KPI-Indikator Pfeilen in PowerBI. Wir verwenden dazu die Messwerte "Arrow-Up" und "Arrow-Down" und visualisieren das Ergebnis mit dem Visual "Image Pro by Cloud Scope".
+Documentation for Creating KPI Indicator Arrows in PowerBI
+This guide describes how to create and visualize KPI indicator arrows in PowerBI. We will use the measures "Arrow-Up" and "Arrow-Down" and visualize the result using the "Image Pro by Cloud Scope" visual.
 
-1. Erstellung des Messwerts "Arrow-UP"
-Erstellen Sie einen neuen Messwert mit dem Namen "Arrow-UP". Dieser Messwert sollte den Pfad oder die URL zu einem Bild des aufwärts zeigenden Pfeils enthalten.
-
-dax
-Code kopieren
-Arrow-UP = "URL_ZU_IHREM_AUFWÄRTS_PFEIL_BILD"
-2. Erstellung des Messwerts "Arrow-Down"
-Erstellen Sie einen neuen Messwert mit dem Namen "Arrow-Down". Dieser Messwert sollte den Pfad oder die URL zu einem Bild des abwärts zeigenden Pfeils enthalten.
+1. Creating the "Arrow-UP" Measure
+Create a new measure named "Arrow-UP". This measure should contain the path or URL to an image of the upward-pointing arrow.
 
 dax
 Code kopieren
-Arrow-Down = "URL_ZU_IHREM_ABWÄRTS_PFEIL_BILD"
-3. Erstellung des Messwerts "KPI"
-Erstellen Sie einen neuen Messwert mit dem Namen "KPI". Dieser Messwert vergleicht die Werte von Value1 und Value2 und verwendet den entsprechenden Pfeil.
+Arrow-UP = "URL_TO_YOUR_UPWARD_ARROW_IMAGE"
+2. Creating the "Arrow-Down" Measure
+Create a new measure named "Arrow-Down". This measure should contain the path or URL to an image of the downward-pointing arrow.
+
+dax
+Code kopieren
+Arrow-Down = "URL_TO_YOUR_DOWNWARD_ARROW_IMAGE"
+3. Creating the "KPI" Measure
+Create a new measure named "KPI". This measure compares the values of Value1 and Value2 and uses the appropriate arrow.
 
 dax
 Code kopieren
@@ -23,21 +23,22 @@ KPI = IF(
     [Arrow-UP], 
     [Arrow-Down]
 )
-// Hinweis: SUM wird nur benötigt, wenn die Werte als Summe angegeben sind.
-4. Visualisierung des KPIs
-Verwenden Sie das Visual "Image Pro by Cloud Scope", um die KPI-Indikatoren zu visualisieren.
+// Note: SUM is only needed if the values are given as sums.
+4. Visualizing the KPI
+Use the "Image Pro by Cloud Scope" visual to visualize the KPI indicators.
 
-Fügen Sie das Visual "Image Pro by Cloud Scope" zu Ihrem Bericht hinzu.
-Ziehen Sie den Messwert "KPI" in das Feld "Image URL" des Visuals.
-Passen Sie das Design des Visuals an, um das gewünschte Erscheinungsbild zu erreichen. Nutzen Sie die "GitHub Basic ReadMe" Vorlage für das Design.
-Beispiel für die Anpassung des Designs
-Sie können die Farben, Schriftarten und andere Design-Elemente nach Ihren Bedürfnissen anpassen. Hier ist ein Beispiel für eine grundlegende Anpassung im GitHub Basic ReadMe Stil:
+Add the "Image Pro by Cloud Scope" visual to your report.
+Drag the "KPI" measure into the "Image URL" field of the visual.
+Customize the design of the visual to achieve the desired appearance. Use the "GitHub Basic ReadMe" template for the design.
+Example of Customizing the Design
+You can customize the colors, fonts, and other design elements according to your needs. Here is an example of a basic customization in the GitHub Basic ReadMe style:
 
-Hintergrundfarbe: Weiß
-Rahmenfarbe: Schwarz
-Schriftart: Consolas, 12pt
-Pfeilgröße: 32x32px
-Fertig! Ihr KPI-Indikator Pfeil Visual sollte jetzt korrekt angezeigt werden und die KPI-Messung entsprechend der Vergleichswerte Value1 und Value2 visualisieren.
+Background color: White
+Border color: Black
+Font: Consolas, 12pt
+Arrow size: 32x32px
+Done!
+Your KPI indicator arrow visual should now be correctly displayed and visualize the KPI measurement based on the comparison values Value1 and Value2.
 
-Zusammenfassung
-Mit dieser Anleitung können Sie in PowerBI visuelle Indikatoren für KPIs erstellen, die die Performance Ihrer Kennzahlen anhand von auf- oder abwärts zeigenden Pfeilen darstellen. Nutzen Sie das Visual "Image Pro by Cloud Scope" und passen Sie das Design nach Ihren Anforderungen an, um aussagekräftige und ansprechende Dashboards zu erstellen.
+Summary
+With this guide, you can create visual indicators for KPIs in PowerBI that display the performance of your metrics using upward or downward pointing arrows. Use the "Image Pro by Cloud Scope" visual and customize the design according to your requirements to create meaningful and appealing dashboards.
