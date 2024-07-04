@@ -4,18 +4,15 @@ This guide explains how to create and visualize KPI indicator arrows in PowerBI 
 Steps
 Create "Arrow-UP" Measure
 
-dax
-Code kopieren
+Copy ArrowUp.txt
 Arrow-UP = "URL_TO_YOUR_UPWARD_ARROW_IMAGE"
 Create "Arrow-Down" Measure
 
-dax
-Code kopieren
+Copy ArrowDown.txt
 Arrow-Down = "URL_TO_YOUR_DOWNWARD_ARROW_IMAGE"
 Create "KPI" Measure
 
-dax
-Code kopieren
+Copy KPI.txt
 KPI = IF(
     CALCULATE(SUM(Value1)) > SUM(Value2), 
     [Arrow-UP], 
